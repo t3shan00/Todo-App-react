@@ -17,8 +17,4 @@ app.use((err,req,res,next) => {
     res.status(statusCode).json({error: err.message})
 })
 
-// app.get('/', (req,res) => {
-//     res.status(200).json({result: "Success"})
-// })
-
 app.listen(port)
