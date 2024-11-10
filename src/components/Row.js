@@ -1,9 +1,10 @@
 import React from 'react';
+import './Row.css';
 
 export default function Row({item,deleteTask}) {
     return (
-        <li key={item.id}>{item.description}
-         <button className='delete-button' onClick={() => deleteTask(item.id)}>Delet</button>
+        <li className="task-row" key={item.id}>{item.description}
+         <button className='delete-button' onClick={() => deleteTask(item.id)}>Delete</button>
         </li>
     )
 }

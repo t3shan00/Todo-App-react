@@ -34,8 +34,13 @@ export default function UserProvider({children}) {
         }
     }
 
+    const signOut = () => {
+        setUser({email: '', password: ''});
+        sessionStorage.removeItem('user');
+    };
+
     return (
-        <userContext.Provider value={{user, setUser, signUp, signIn}}>
+        <userContext.Provider value={{user, setUser, signUp, signIn, signOut}}>
             { children }
         </userContext.Provider>
     )
